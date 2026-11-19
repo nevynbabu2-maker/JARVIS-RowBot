@@ -53,7 +53,7 @@ from row_bot.data_paths import get_row_bot_data_dir
 logger = logging.getLogger(__name__)
 
 #: Where the count goes: the owner's collector on Cloudflare. Empty: the feature is dormant.
-COLLECTOR_URL = "https://row-bot-count.row-bot.workers.dev"
+COLLECTOR_URL = ""  # JARVIS fork: first-party install counting is disabled by default.
 #: ``0`` (or ``false``, ``off``, ``no``) turns install stats off for this installation.
 ENV = "ROW_BOT_INSTALL_COUNT"
 SCHEMA = 1

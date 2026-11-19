@@ -19,7 +19,7 @@ Legacy values (``allow_all``, ``auto_edit``, ``agent_run``…) are the old
 on, never a migration.
 
 A new conversation, workflow or Developer workspace starts at the level the person
-last chose for a conversation, Auto until they choose one
+last chose for a conversation, Ask until they choose one
 (``full_autonomy.new_level``).
 """
 

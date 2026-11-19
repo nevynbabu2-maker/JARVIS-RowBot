@@ -6,20 +6,20 @@ from pathlib import Path
 
 from row_bot.version import __version__
 
-APP_DISPLAY_NAME = "Row-Bot"
+APP_DISPLAY_NAME = "JARVIS"
 APP_SLUG = "row-bot"
 APP_PYTHON_IDENTIFIER = "row_bot"
-APP_COMPACT_NAME = "RowBot"
+APP_COMPACT_NAME = "JARVIS"
 APP_PING_ID = APP_SLUG
 APP_BRAND_ACCENT = "#4F78A4"
 APP_BRAND_ACCENT_RGB = "79, 120, 164"
 
-APP_WEBSITE_URL = "https://row-bot.ai"
-APP_REPOSITORY = "siddsachar/row-bot"
+APP_WEBSITE_URL = "https://github.com/nevynbabu2-maker/JARVIS-RowBot"
+APP_REPOSITORY = "nevynbabu2-maker/JARVIS-RowBot"
 APP_REPOSITORY_URL = f"https://github.com/{APP_REPOSITORY}"
 APP_RELEASES_URL = f"https://api.github.com/repos/{APP_REPOSITORY}/releases"
 APP_RELEASES_LATEST_URL = f"{APP_RELEASES_URL}/latest"
-APP_SUPPORT_URL = f"{APP_WEBSITE_URL}/contact.html"
+APP_SUPPORT_URL = f"{APP_REPOSITORY_URL}/issues"
 APP_SECURITY_URL = f"{APP_REPOSITORY_URL}/security"
 
 APP_USER_AGENT = f"{APP_DISPLAY_NAME}/{__version__}"
