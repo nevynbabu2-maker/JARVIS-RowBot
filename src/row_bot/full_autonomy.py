@@ -9,7 +9,7 @@
 - Agent-facing tools never set it (``AGENT_SETTABLE_MODES``).
 
 The same file keeps the level new conversations, workflows and Developer
-workspaces start at: the last one the person chose for a conversation, Auto
+workspaces start at: the last one the person chose for a conversation, Ask
 until then, and never Hands-off (``new_level`` / ``remember_level``).
 """
 
@@ -110,7 +110,7 @@ def new_level() -> ApprovalMode:
     """The level a new conversation, workflow or Developer workspace starts at.
 
     The last level the person chose for a conversation (Hands-off counts as Auto: they turn
-    it on in each conversation), Auto until they choose one. In a sandbox, the level of the
+    it on in each conversation), Ask until they choose one. In a sandbox, the level of the
     chat that made it.
     """
 
@@ -118,7 +118,7 @@ def new_level() -> ApprovalMode:
         return starting_level()
     with _LOCK:
         saved = known_approval_mode(_read().get("new_level"))
-    return saved if saved in AGENT_SETTABLE_MODES else "auto"
+    return saved if saved in AGENT_SETTABLE_MODES else "approve"
 
 
 def remember_level(mode: object) -> None:
