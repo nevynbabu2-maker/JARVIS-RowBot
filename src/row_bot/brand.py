@@ -6,10 +6,10 @@ from pathlib import Path
 
 from row_bot.version import __version__
 
-APP_DISPLAY_NAME = "Row-Bot"
+APP_DISPLAY_NAME = "JARVIS"
 APP_SLUG = "row-bot"
 APP_PYTHON_IDENTIFIER = "row_bot"
-APP_COMPACT_NAME = "RowBot"
+APP_COMPACT_NAME = "JARVIS"
 APP_PING_ID = APP_SLUG
 APP_BRAND_ACCENT = "#4F78A4"
 APP_BRAND_ACCENT_RGB = "79, 120, 164"
