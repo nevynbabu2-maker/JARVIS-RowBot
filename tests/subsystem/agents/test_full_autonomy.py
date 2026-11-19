@@ -74,8 +74,8 @@ def test_workflows_saved_with_the_old_auto_become_reviewed_auto_never_full(tmp_p
 
 
 def test_new_conversations_workflows_and_workspaces_start_at_the_level_chosen_last(tmp_path, reload_for_data_dir):
-    """Auto until the person chooses a level for a conversation; then that level. Hands-off is turned on in
-    each conversation, so it starts new ones at Auto. A conversation saved without a level stays on Ask."""
+    """Ask until the person chooses a level for a conversation; then that level. Hands-off is turned on in
+    each conversation, so it starts new ones at Ask. A conversation saved without a level stays on Ask."""
     threads, tasks, task_tool = reload_for_data_dir(
         tmp_path / "data", "row_bot.threads", "row_bot.tasks", "row_bot.tools.task_tool")
     from row_bot import full_autonomy
@@ -90,7 +90,7 @@ def test_new_conversations_workflows_and_workspaces_start_at_the_level_chosen_la
         return (threads._get_thread_approval_mode(conversation), workflow["safety_mode"],
                 made_by_agent["safety_mode"], workspace.approval_mode)
 
-    assert starts() == ("auto",) * 4
+    assert starts() == ("approve",) * 4
     full_autonomy.remember_level("approve")
     assert starts() == ("approve",) * 4
     full_autonomy.remember_level("full")
